@@ -1,0 +1,270 @@
+/* ------------------------------------------------------
+   GLOBAL BACKGROUND IMAGE
+------------------------------------------------------ */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: url("images/knit.jpg") top left / 520px repeat fixed !important;
+  font-family: "Inter", sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ------------------------------------------------------
+   REMOVE QUARTO DEFAULT WHITE BOXES
+------------------------------------------------------ */
+main.quarto-container,
+#quarto-content,
+.page-content,
+.quarto-title-block,
+.quarto-document-content,
+body > .nav-fixed,
+body > .container-fluid {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ------------------------------------------------------
+   VARIABLES (NO SCSS, PURE CSS)
+------------------------------------------------------ */
+:root {
+  --paper: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #5f6368;
+  --accent: #768e78;
+  --accent-light: #c6c09c;
+  --accent-hover: #ebdec0;
+  --border: rgba(0,0,0,0.06);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* ------------------------------------------------------
+   DARK MODE VARIABLES
+------------------------------------------------------ */
+[data-bs-theme="dark"] {
+  --paper: #1a1d24;
+  --text-primary: #f1f3f5;
+  --text-secondary: #9ca3af;
+  --accent: #818cf8;
+  --accent-light: #312e81;
+  --accent-hover: #a5b4fc;
+  --border: rgba(255,255,255,0.1);
+}
+
+/* ------------------------------------------------------
+   NAVBAR
+------------------------------------------------------ */
+.navbar {
+  background: #8096ad !important;
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+/* ------------------------------------------------------
+   HERO SECTION
+------------------------------------------------------ */
+.hero-section {
+  padding: 5rem 1rem;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 1100px;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-photo-card {
+  background: var(--paper);
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-photo-clean {
+  width: 330px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.hero-name {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  margin-bottom: .5rem;
+}
+
+.hero-title {
+  font-size: 1.3rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.hero-tagline {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+
+
+/* ------------------------------------------------------
+   BUTTONS
+------------------------------------------------------ */
+.btn-primary,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-ghost {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-ghost:hover {
+  background: var(--accent-light);
+}
+.link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: white !important;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: 0.2s ease;
+}
+
+.link:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ------------------------------------------------------
+   CARDS
+------------------------------------------------------ */
+.cards {
+  max-width: 1200px;
+  margin: 3rem auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card {
+  background: rgba(255,255,255,0.92);
+  border-radius: 24px;
+  padding: 2.4rem;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+  backdrop-filter: blur(4px);
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+.card p {
+  color: var(--text-secondary);
+}
+.about-card {
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 1.5rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+  line-height: 1.55;
+}
+/*******************************************************
+  🎨 PROJECT GRID + PROJECT CARD STYLES
+********************************************************/
+.proj-grid {
+  max-width: 1200px;
+  margin: 3rem auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  padding: 0 1rem;
+}
+
+.proj-card {
+  background: var(--paper);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.proj-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.proj-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  font-family: "Playfair Display", serif;
+}
+
+.proj-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.bullets {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.25rem;
+}
+
+.bullets li {
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary);
+}
+
+
+/* ------------------------------------------------------
+   RESPONSIVE
+------------------------------------------------------ */
+@media (max-width: 900px) {
+  .hero-text, .hero-content {
+    text-align: center;
+  }
+}
+.quarto-title-block .title,
+#title-block-header .title,
+.quarto-title-block.default .title {
+  text-align: center !important;
+  width: 100%;
+}
